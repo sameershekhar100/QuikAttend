@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "613690538185",
+    "project_id": "quikattend",
+    "storage_bucket": "quikattend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613690538185:android:f34b6ed6a9d4d6d5f13518",
+        "android_client_info": {
+          "package_name": "com.example.android.quikattend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613690538185-kjr9i2odmirppr0omf7nt4p1rri6h8ug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN-AChNIBjWQziYqn5rClJMAFw2NvIIss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613690538185-kjr9i2odmirppr0omf7nt4p1rri6h8ug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
