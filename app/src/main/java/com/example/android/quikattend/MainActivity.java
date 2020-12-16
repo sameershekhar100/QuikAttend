@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
@@ -21,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN =1000 ;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
+    Button checkAttendance;
+    Button newClass;
+    Button formSheet;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +33,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         firebaseAuth=FirebaseAuth.getInstance();
         setStateListener();
+        checkAttendance=(Button) findViewById(R.id.check_attendance);
+        newClass=(Button) findViewById(R.id.new_class);
+        formSheet=(Button) findViewById(R.id.sheet_form);
+        checkAttendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent transfer=new Intent(MainActivity.this,CheckAttendance.class);
+                startActivity(transfer);
+            }
+        });
+        newClass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent transfer=new Intent(MainActivity.this, NewClass.class);
+                startActivity(transfer);
+            }
+        });
+        formSheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent transfer=new Intent(MainActivity.this,FormSheet.class);
+                startActivity(transfer);
+            }
+        });
     }
     private void setStateListener()
     {
